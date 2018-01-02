@@ -29,7 +29,8 @@
 
 	<div class="metronome">
 		<input type="number" id="inputbpm" class="inputclass">
-		<input type="button" id="button" class="bpmbutton" value="Set BPM"/><br>
+		<input type="button" id="button" class="bpmbutton" value="Set BPM"/>
+		<input type="button" id="recordbtn" class="recordbtn-class" value="Record"><br>
 		<select id="ddmenu" class="dropdown" onchange="SelectedValue(this)">
 			<option value="sounds/tink.wav">Tink</option>
 	    	<option value="sounds/clap.wav">Clap</option>
@@ -157,6 +158,7 @@
 
 <script src="keyboard.js"></script>
 <script src="drumkit.js"></script>
+<script src="record.js"></script>
 <script>
 	
 	function fireKeyboardEvent(event, keycode)
