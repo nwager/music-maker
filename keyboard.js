@@ -40,7 +40,7 @@ function SelectedWave(sel)
 
 window.addEventListener('keydown', function (e) {
     
-    if (e.keyCode == 38 && octave < 8) // go up an octave
+    if (e.keyCode == 38 && octave < 8) // go up an octave by doubling pitch
     {
         for (var i = frequencies.length - 1; i >= 0; i--) {
             frequencies[i] *= 2;
@@ -49,7 +49,7 @@ window.addEventListener('keydown', function (e) {
         document.getElementById("octavecount").innerHTML = "Octave: " + octave;
     }
 
-    if (e.keyCode == 40 && octave > 0) // go down an octave
+    if (e.keyCode == 40 && octave > 0) // go down an octave by halving pitch
     {
         var list = document.getElementsByClassName("synth");
         for (var i = frequencies.length - 1; i >= 0; i--) {
