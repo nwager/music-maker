@@ -1,0 +1,170 @@
+html {
+	font-size: 10px;
+	/*background: url(http://i.imgur.com/b9r5sEL.jpg) top center;
+	background-size: cover;*/
+	background-color: #33445b;
+}
+body,html {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+h1 {
+	float: right;
+	border: .4rem solid black;
+	border-radius: .5rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	width: 10rem;
+	text-align: center;
+	color: white;
+	background: rgba(0,0,0,0.4);
+	text-shadow: 0 0 .5rem black;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.slidecontainer {
+	float: right;
+}
+
+.volSlider {
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+p {
+	font-size: 16px;
+	margin-left: 20px;
+	color: #ffc600;
+}
+
+#voltext {
+	text-align: left;
+	margin-right: 
+}
+
+.music {
+	display: box;
+}
+
+.synthkeys {
+	display: flex;
+	flex: 1;
+	min-height: 10vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.white {
+	border: .4rem solid white;
+	border-radius: .5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	transition: all .07s ease;
+	width: 10rem;
+	text-align: center;
+	color: black;
+	background: rgba(255,255,255,0.6);
+	text-shadow: 0 0 .1rem black;
+}
+
+.black {
+	border: .4rem solid black;
+	border-radius: .5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	transition: all .07s ease;
+	width: 10rem;
+	text-align: center;
+	color: white;
+	background: rgba(0,0,0,0.4);
+	text-shadow: 0 0 .5rem black;
+}
+
+.drums {
+	display: flex;
+	flex: 1;
+	min-height: 20vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.drumkey {
+	border: .4rem solid black;
+	border-radius: .5rem;
+	margin: 1rem;
+	font-size: 1.5rem;
+	padding: 1rem .5rem;
+	transition: all .07s ease;
+	width: 10rem;
+	text-align: center;
+	color: white;
+	background: rgba(0,0,0,0.4);
+	text-shadow: 0 0 .5rem black;
+}
+
+.playing {
+	transform: scale(1.1);
+	border-color: #ffc600;
+	background-color: rgba(0,0,0,0.6);
+	box-shadow: 0 0 1rem #ffc600;
+}
+
+kbd {
+	display: block;
+	font-size: 4rem;
+}
+
+.sound {
+	font-size: 14px;
+	text-shadow: 0 0 0.5rem black;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color: #ffc600;
+}
+
+.bpmbutton {
+	background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+    width: 100px;
+}
+
+.inputclass {
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    margin-left:20px;
+    margin-top: 20px;
+    width: 90px;
+}
+
+.dropdown {
+	background-color: white;
+	height: 40px;
+	overflow: hidden;
+	font-size: 16px;
+	width: 240px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+.wavetype {
+	float: right;
+}
+
+.dropdownwave {
+	background-color: white;
+	height: 40px;
+	overflow: hidden;
+	font-size: 16px;
+	width: 240px;
+	margin-right: 20px;
+	margin-top: 20px;
+}

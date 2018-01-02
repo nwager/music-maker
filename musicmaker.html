@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Maker</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<!--button class="trigger-event">Key Press</button-->
+
+	<div class="synthstats">
+		<h1 id="octavecount">Octave: 5</h1>
+
+		<div class="slidecontainer">
+	  		<input type="range" min="0" max="100" value="50" class="volSlider" id="volRange">
+	  		<p id="voltext">SynthVolume: <span id="demo"></span></p>
+		</div>
+
+		<div class="wavetype">
+			<select id="ddwave" class="dropdownwave" onchange="SelectedWave(this)">
+				<option value="square">Square</option>
+		    	<option value="sine">Sine</option>
+		    	<option value="triangle">Triangle</option>
+		    	<option value="sawtooth">Sawtooth</option>
+		    </select>
+
+			<p>Type of sound waveform.</p>
+		</div>
+	</div>
+
+	<div class="metronome">
+		<input type="number" id="inputbpm" class="inputclass">
+		<input type="button" id="button" class="bpmbutton" value="Set BPM"/><br>
+		<select id="ddmenu" class="dropdown" onchange="SelectedValue(this)">
+			<option value="sounds/tink.wav">Tink</option>
+	    	<option value="sounds/clap.wav">Clap</option>
+	    	<option value="sounds/hihat.wav">Hihat</option>
+	    	<option value="sounds/kick.wav">Kick</option>
+	    	<option value="sounds/openhat.wav">Openhat</option>
+	    	<option value="sounds/boom.wav">Boom</option>
+	    	<option value="sounds/ride.wav">Ride</option>
+	    	<option value="sounds/snare.wav">Snare</option>
+	    	<option value="sounds/tom.wav">Tom</option>
+	    </select>
+
+		<p>Click the button once to stop the metronome,<br>and again to start the new bpm.</p><br>
+	</div>
+
+	<div class="music">
+
+	    <div class="synthkeys"> <!-- keycode.info -->
+
+		    <div data-key="65" class="synthkey synth white">
+	            <kbd>A</kbd>
+	            <span class="sound">C</span>
+	        </div>
+	        <div data-key="87" class="synthkey synth black">
+	            <kbd>W</kbd>
+	            <span class="sound">C#</span>
+	        </div>
+	        <div data-key="83" class="synthkey synth white">
+	            <kbd>S</kbd>
+	            <span class="sound">D</span>
+	        </div>
+	        <div data-key="69" class="synthkey synth black">
+	            <kbd>E</kbd>
+	            <span class="sound">D#</span>
+	        </div>
+	        <div data-key="68" class="synthkey synth white">
+	            <kbd>D</kbd>
+	            <span class="sound">E</span>
+	        </div>
+	        <div data-key="70" class="synthkey synth white">
+	            <kbd>F</kbd>
+	            <span class="sound">F</span>
+	        </div>
+	        <div data-key="84" class="synthkey synth black">
+	            <kbd>T</kbd>
+	            <span class="sound">F#</span>
+	        </div>
+	        <div data-key="71" class="synthkey synth white">
+	            <kbd>G</kbd>
+	            <span class="sound">G</span>
+	        </div>
+	        <div data-key="89" class="synthkey synth black">
+	            <kbd>Y</kbd>
+	            <span class="sound">G#</span>
+	        </div>
+	        <div data-key="72" class="synthkey synth white">
+	            <kbd>H</kbd>
+	            <span class="sound">A</span>
+	        </div>
+	        <div data-key="85" class="synthkey synth black">
+	            <kbd>U</kbd>
+	            <span class="sound">A#</span>
+	        </div>
+	        <div data-key="74" class="synthkey synth white">
+	            <kbd>J</kbd>
+	            <span class="sound">B</span>
+	        </div>
+	        <div data-key="75" class="synthkey synth white">
+	            <kbd>K</kbd>
+	            <span class="sound">C</span>
+	        </div>
+
+	    </div>
+
+	    <div class="drums"> <!-- keycode.info -->
+
+			<div data-key="90" class="drumkey">
+				<kbd>Z</kbd>
+				<span class="sound">clap</span>
+			</div>
+			<div data-key="88" class="drumkey">
+				<kbd>X</kbd>
+				<span class="sound">hihat</span>
+			</div>
+			<div data-key="67" class="drumkey">
+				<kbd>C</kbd>
+				<span class="sound">kick</span>
+			</div>
+			<div data-key="86" class="drumkey">
+				<kbd>V</kbd>
+				<span class="sound">openhat</span>
+			</div>
+			<div data-key="66" class="drumkey">
+				<kbd>B</kbd>
+				<span class="sound">boom</span>
+			</div>
+			<div data-key="78" class="drumkey">
+				<kbd>N</kbd>
+				<span class="sound">ride</span>
+			</div>
+			<div data-key="77" class="drumkey">
+				<kbd>M</kbd>
+				<span class="sound">snare</span>
+			</div>
+			<div data-key="188" class="drumkey">
+				<kbd>,</kbd>
+				<span class="sound">tom</span>
+			</div>
+			<div data-key="190" class="drumkey">
+				<kbd>.</kbd>
+				<span class="sound">tink</span>
+			</div>
+		</div>
+	</div>
+
+<audio data-key="90" src="sounds/clap.wav"></audio>
+<audio data-key="88" src="sounds/hihat.wav"></audio>
+<audio data-key="67" src="sounds/kick.wav"></audio>
+<audio data-key="86" src="sounds/openhat.wav"></audio>
+<audio data-key="66" src="sounds/boom.wav"></audio>
+<audio data-key="78" src="sounds/ride.wav"></audio>
+<audio data-key="77" src="sounds/snare.wav"></audio>
+<audio data-key="188" src="sounds/tom.wav"></audio>
+<audio data-key="190" src="sounds/tink.wav"></audio>
+
+<script src="keyboard.js"></script>
+<script src="drumkit.js"></script>
+<!--script>
+	
+  document.querySelector('.trigger-event').addEventListener('click', function(e){
+    e.preventDefault(); 
+
+    var e = new Event("keydown");
+    e.key="Z";    // just enter the char you want to send 
+    e.keyCode=e.key.charCodeAt(0);
+    e.which=e.keyCode;
+    e.altKey=false;
+    e.ctrlKey=true;
+    e.shiftKey=false;
+    e.metaKey=false;
+    e.bubbles=true;
+    this.dispatchEvent(e);
+
+  }, false);
+
+</script-->
+
+</body>
+</html>
+
