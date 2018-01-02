@@ -55,7 +55,7 @@ function SelectedValue(sel) {
 	}
 	else
 	{
-		alert("Can change the metronome sound when the metronome is off");
+		alert("Change the metronome sound when the metronome is off");
 	}
 }
 
