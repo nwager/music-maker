@@ -38,7 +38,7 @@ function SelectedWave(sel)
     waveform = value;
 }
 
-document.body.addEventListener('keydown', function (e) {
+window.addEventListener('keydown', function (e) {
     
     if (e.keyCode == 38 && octave < 8) // go up an octave
     {
@@ -75,7 +75,7 @@ document.body.addEventListener('keydown', function (e) {
     }
 });
 
-document.body.addEventListener('keyup', function (e) {
+window.addEventListener('keyup', function (e) {
   	
     if (keycodes.includes(e.keyCode))
     {
