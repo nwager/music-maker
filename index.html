@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<!--button class="trigger-event">Key Press</button-->
+	<!--button onclick="fireKeyboardEvent('keydown', 90)">Key Press</button-->
 
 	<div class="synthstats">
 		<h1 id="octavecount">Octave: 5</h1>
@@ -52,7 +52,7 @@
 	    <div class="synthkeys"> <!-- keycode.info -->
 
 		    <div data-key="65" class="synthkey synth white">
-	            <kbd>A</kbd>
+	            <kbd onmousedown="fireKeyboardEvent('keydown', 65)" onmouseup="fireKeyboardEvent('keyup', 65)">A</kbd>
 	            <span class="sound">C</span>
 	        </div>
 	        <div data-key="87" class="synthkey synth black">
@@ -159,25 +159,27 @@
 
 <script src="keyboard.js"></script>
 <script src="drumkit.js"></script>
-<!--script>
+<script>
 	
-  document.querySelector('.trigger-event').addEventListener('click', function(e){
-    e.preventDefault(); 
+	function fireKeyboardEvent(event, keycode)
+	{
+		var keyboardEvent = document.createEventObject ?
+			document.createEventObject() : document.createEvent("Events");
 
-    var e = new Event("keydown");
-    e.key="Z";    // just enter the char you want to send 
-    e.keyCode=e.key.charCodeAt(0);
-    e.which=e.keyCode;
-    e.altKey=false;
-    e.ctrlKey=true;
-    e.shiftKey=false;
-    e.metaKey=false;
-    e.bubbles=true;
-    this.dispatchEvent(e);
+		if(keyboardEvent.initEvent) {
+			keyboardEvent.initEvent(event, true, true);
+		}
 
-  }, false);
+		keyboardEvent.keyCode = keycode;
+		keyboardEvent.which = keycode;
 
-</script-->
+		document.dispatchEvent ? document.dispatchEvent(keyboardEvent) 
+		                   : document.fireEvent(event, keyboardEvent);
+	}
+
+	//fireKeyboardEvent("keydown", 90);
+
+</script>
 
 </body>
 </html>
