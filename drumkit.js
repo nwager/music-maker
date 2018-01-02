@@ -1,9 +1,6 @@
 var metronomeOn = false;
 var value = "sounds/tink.wav";
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-
 function playSound(e)
 {
 	const keyaudio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
