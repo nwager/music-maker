@@ -1,4 +1,5 @@
 var isRecording = false;
+var isPlaying = false;
 var keyDowns = [];
 var keyUps = [];
 
@@ -7,6 +8,7 @@ var synthDowns = [false, false, false, false, false, false, false, false, false,
 
 
 var recbutton = document.getElementById("recordbtn");
+var playbutton = document.getElementById("playbtn");
 recbutton.onclick = function ()
 {
 	if (isRecording)
@@ -68,3 +70,40 @@ window.addEventListener("keyup", function (e)
 		}
 	}
 });
+
+// THESE TWO VARIABLES STORE THE TIME AND DATE WHEN THE PAGE IS LOADED
+var startDate = new Date();
+var startTime = startDate.getTime();
+var currTime;
+setInterval(getCurrTime, 30);
+
+// THIS FUNCTION CALCULATES THE SECONDS ELAPSED SINCE THE PAGE WAS LOADED
+function getCurrTime () 
+{ 
+	var date_now = new Date(); 
+	var time_now = parseFloat(date_now.getTime()); 
+	var time_diff = parseFloat(time_now - startTime); 
+	currTime = time_diff;
+};
+
+var playfunc;
+playbutton.onclick = function ()
+{
+	if (!isRecording && keyDowns && !isPlaying)
+	{
+		playbutton.style.backgroundColor = "red";
+		isPlaying = true;
+		playfunc = setInterval(Play, 300);
+	}
+	else if (isPlaying)
+	{
+		playbutton.style.backgroundColor = "#4CAF50";
+		isPlaying = false;
+		clearInterval(playfunc);
+	}
+}
+
+function Play ()
+{
+	console.log(currTime);
+}
