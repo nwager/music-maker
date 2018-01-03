@@ -27,7 +27,6 @@ function sleep(ms) {
 var button = document.getElementById("button");
 button.onclick = function() {
 	var bpm = parseFloat(document.getElementById("inputbpm").value);
-	console.log	(document.getElementById("inputbpm").value);
 	if (metronomeOn)
 	{
 		metronomeOn = false;
@@ -66,7 +65,6 @@ async function metronome (beats) {
 		if (beats > 0)
 		{
 			audio.play();
-			console.log("played audio");
 			await sleep((60 / beats) * 1000);
 			audio.pause();
 			audio.currentTime = 0.0;
