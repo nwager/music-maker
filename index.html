@@ -160,25 +160,6 @@
 <script src="keyboard.js"></script>
 <script src="drumkit.js"></script>
 <script src="record.js"></script>
-<script>
-	
-	function fireKeyboardEvent(event, keycode)
-	{
-		var keyboardEvent = document.createEventObject ?
-			document.createEventObject() : document.createEvent("Events");
-
-		if(keyboardEvent.initEvent) {
-			keyboardEvent.initEvent(event, true, true);
-		}
-
-		keyboardEvent.keyCode = keycode;
-		keyboardEvent.which = keycode;
-
-		document.dispatchEvent ? document.dispatchEvent(keyboardEvent) 
-		                   : document.fireEvent(event, keyboardEvent);
-	}
-
-</script>
 
 </body>
 </html>
