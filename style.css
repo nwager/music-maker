@@ -90,6 +90,7 @@ p {
 }
 
 .drums {
+	margin-top: 5rem;
 	display: flex;
 	flex: 1;
 	min-height: 20vh;
