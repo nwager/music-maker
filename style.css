@@ -193,3 +193,17 @@ kbd {
 	margin-right: 20px;
 	margin-top: 20px;
 }
+
+.github {
+	text-decoration: none;
+	font-size: 1.8rem;
+	color: #ffc600;
+	text-align: center;
+}
+
+.githubparent {
+	position: absolute;
+	bottom: 2rem;
+	width: 100%;
+	text-align: center;
+}
