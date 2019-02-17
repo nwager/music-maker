@@ -41,7 +41,6 @@ p {
 
 #voltext {
 	text-align: left;
-	margin-right: 
 }
 
 .music {
@@ -82,6 +81,12 @@ p {
 	color: white;
 	background: rgba(0,0,0,0.4);
 	text-shadow: 0 0 .5rem black;
+}
+
+.pad {
+	padding: 0 1rem;
+	background: transparent;
+	border: .4rem solid transparent;
 }
 
 .drums {

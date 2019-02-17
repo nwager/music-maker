@@ -49,24 +49,47 @@
 
 	<div class="music">
 
-	    <div class="synthkeys"> <!-- keycode.info -->
+		<div class="synthkeys blackkeys">
+			<div data-key="87" class="synthkey synth black">
+				<kbd>W</kbd>
+				<span class="sound">C#</span>
+			</div>
+			<div data-key="69" class="synthkey synth black">
+				<kbd>E</kbd>
+				<span class="sound">D#</span>
+			</div>
+			<div class="synthkey synth black pad">
+
+			</div>
+			<div data-key="84" class="synthkey synth black">
+				<kbd>T</kbd>
+				<span class="sound">F#</span>
+			</div>
+			<div data-key="89" class="synthkey synth black">
+				<kbd>Y</kbd>
+				<span class="sound">G#</span>
+			</div>
+			<div data-key="85" class="synthkey synth black">
+				<kbd>U</kbd>
+				<span class="sound">A#</span>
+			</div>
+			<div class="synthkey synth black pad">
+
+			</div>
+		</div>
+
+	    <div class="synthkeys whitekeys"> <!-- keycode.info -->
 
 		    <div data-key="65" class="synthkey synth white">
 	            <kbd onmousedown="fireKeyboardEvent('keydown', 65)" onmouseup="fireKeyboardEvent('keyup', 65)">A</kbd>
 	            <span class="sound">C</span>
 	        </div>
-	        <div data-key="87" class="synthkey synth black">
-	            <kbd>W</kbd>
-	            <span class="sound">C#</span>
-	        </div>
+	        <!--W-->
 	        <div data-key="83" class="synthkey synth white">
 	            <kbd>S</kbd>
 	            <span class="sound">D</span>
 	        </div>
-	        <div data-key="69" class="synthkey synth black">
-	            <kbd>E</kbd>
-	            <span class="sound">D#</span>
-	        </div>
+	        <!--E-->
 	        <div data-key="68" class="synthkey synth white">
 	            <kbd>D</kbd>
 	            <span class="sound">E</span>
@@ -75,26 +98,17 @@
 	            <kbd>F</kbd>
 	            <span class="sound">F</span>
 	        </div>
-	        <div data-key="84" class="synthkey synth black">
-	            <kbd>T</kbd>
-	            <span class="sound">F#</span>
-	        </div>
+	        <!--E-->
 	        <div data-key="71" class="synthkey synth white">
 	            <kbd>G</kbd>
 	            <span class="sound">G</span>
 	        </div>
-	        <div data-key="89" class="synthkey synth black">
-	            <kbd>Y</kbd>
-	            <span class="sound">G#</span>
-	        </div>
+	        <!--T-->
 	        <div data-key="72" class="synthkey synth white">
 	            <kbd>H</kbd>
 	            <span class="sound">A</span>
 	        </div>
-	        <div data-key="85" class="synthkey synth black">
-	            <kbd>U</kbd>
-	            <span class="sound">A#</span>
-	        </div>
+	        <!--Y-->
 	        <div data-key="74" class="synthkey synth white">
 	            <kbd>J</kbd>
 	            <span class="sound">B</span>
@@ -103,7 +117,7 @@
 	            <kbd>K</kbd>
 	            <span class="sound">C</span>
 	        </div>
-
+			<!--U-->
 	    </div>
 
 	    <div class="drums"> <!-- keycode.info -->
